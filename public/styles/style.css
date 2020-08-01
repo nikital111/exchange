@@ -1,0 +1,60 @@
+#cont {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    margin: 0px 0px 10px 0px;
+    display: flex;
+}
+
+.help{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 90px;
+}
+
+.contTrades {
+    display: flex;
+}
+
+.contHelp {
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    height: 40px;
+    min-width: 80px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 24px;
+}
+
+iframe {
+    width: 100%;
+    height: 325px;
+}
+
+.getDiv {
+    margin-left: 20px;
+}
+
+select {
+    border: 1px solid;
+    width: 90px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+option {
+    font-size: 15px;
+    font-weight: 550;
+}

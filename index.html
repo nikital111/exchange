@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/connectBTC.js" defer></script>
+    <script src="/scripts/connectETH.js" defer></script>
+    <script src="/scripts/tableTrades.js" defer></script>
+</head>
+
+<body> 
+    <div id='cont'>
+        <div class="help">
+            <button id='butBTC'>Обновить BTC/USD</button>
+        <div class='contTrades'>
+            <div class="contHelp">
+                <h3>Куплено:</h3>
+
+                <h2 id='posTradesBTC'>00</h2>
+
+            </div>
+            <div class="contHelp">
+                <h3>Продано:</h3>
+
+                <h2 id='negTradesBTC'>00</h2>
+
+            </div>
+            <div class="contHelp">
+                <h2 id='timerBTC'>00:00:00</h2>
+            </div>
+        </div>
+        </div>
+
+       <div class="help">
+        <button id="butETH">Обновить ETH/USD</button>
+        <div class='contTrades'>
+            
+            <div class="contHelp">
+                <h3>Куплено:</h3>
+
+                <h2 id='posTradesETH'>00</h2>
+
+            </div>
+            <div class="contHelp">
+                <h3>Продано:</h3>
+
+                <h2 id='negTradesETH'>00</h2>
+
+            </div>
+            <div class="contHelp">
+                <h2 id='timerETH'>00:00:00</h2>
+            </div>
+        </div>
+       </div>
+       <button onclick="winOp()">Открыть в отдельном окне</button>
+    </div>
+
+    <div class="getDiv">
+        <select id="selectorTime">
+            <option value="1">1 мин</option>
+            <option value="5" selected>5 мин</option>
+            <option value="30">30 мин</option>
+            <option value="60">1 час</option>
+            <option value="240">4 часа</option>
+            <option value="1440">1 день</option>
+        </select>
+        <select id="selectorCurrency">
+            <option value="BTCUSD" selected>BTC/USD</option>
+            <option value="ETHUSD">ETH/USD</option>
+        </select>
+        До:
+        <input type="datetime-local" id="endTime" />
+        <button id="butResetDate">Сбросить дату</button>
+        <button id="getBut">Загрузить таблицу</button>
+    </div>
+    <iframe id='iframeTrades'>
+
+    </iframe>
+
+   <script>
+        function winOp() {
+            let newWindow = open('/', 'example', 'width=885px,height=200px,top=450px');
+        }
+    </script>
+</body>
+
+</html>
